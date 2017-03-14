@@ -52,29 +52,37 @@ $(document).ready(function(){
 		} 		else {
 			answersWrong++;
 			$("#wrong-answers").html("Wrong Answers: " + answersWrong);
-		} if ($("#a6").is(':checked')) {
+		} 
+		//For second question, if correct is chosen//
+			if ($("#a6").is(':checked')) {
 			answersRight++;
 			$("#right-answers").html("Right Answers: " + answersRight);
 		} 		else {
 			answersWrong++;
 			$("#wrong-answers").html("Wrong Answers: " + answersWrong);
-		}	if ($("#a11").is(':checked')) {
+		}	
+		//For third question, if correct is chosen//
+			if ($("#a11").is(':checked')) {
 			answersRight++;
 			$("#right-answers").html("Right Answers: " + answersRight);
 		} 		else {
 			answersWrong++;
 			$("#wrong-answers").html("Wrong Answers: " + answersWrong);
-		}	if ($("#a13").is(':checked')) {
+		}	
+		//For fourth question, if correct is chosen//
+			if ($("#a13").is(':checked')) {
 			answersRight++;
 			$("#right-answers").html("Right Answers: " + answersRight);
 		} 		else {
 			answersWrong++;
 			$("#wrong-answers").html("Wrong Answers: " + answersWrong);
-		}	if ($("#a19").is(':checked')) {
+		}	
+		//For fifth question, if correct is chosen//
+			if ($("#a19").is(':checked')) {
 			answersRight++;
 			$("#right-answers").html("Right Answers: " + answersRight);
 		} 
-		else {
+			else {
 			answersWrong++;
 			$("#wrong-answers").html("Wrong Answers: " + answersWrong);
 		}
