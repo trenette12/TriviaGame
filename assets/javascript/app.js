@@ -23,6 +23,13 @@ function countdownStart() {
 function clearTimer() {
 	clearTimeout(countdown);
 }
+
+function refreshPage(){
+	setTimeout(function(){
+	location.reload();
+	}, 5 * 1000);
+}
+
 //This startGame function will start once the user clicks the start button. Once the button is clicked the questions form will appear.
 $(document).ready(function startGame(){
     $("#startgame").click((function(){
@@ -37,14 +44,42 @@ $(document).ready(function startGame(){
 
 });
 //When user clicks on the correct answer which has a class of a4 it will be added to the answersRight variable, else they'll be added to the answersWrong variable.//
-$(document).on("click", function() {
-	if ($(".correct").is(":checked")) {
-		answersRight++;
-		$("#right-answers").html("Right Answers: " + answersRight++);
-	} else {
-		answersWrong++;
-		$("wrong-answers").html("Wrong Answers: " + answersWrong++);
-	}
+$(document).ready(function(){
+	$("#donebutton").on("click", function() {
+		if ($("#a4").is(':checked')) {
+			answersRight++;
+			$("#right-answers").html("Right Answers: " + answersRight);
+		} 		else {
+			answersWrong++;
+			$("#wrong-answers").html("Wrong Answers: " + answersWrong);
+		} if ($("#a6").is(':checked')) {
+			answersRight++;
+			$("#right-answers").html("Right Answers: " + answersRight);
+		} 		else {
+			answersWrong++;
+			$("#wrong-answers").html("Wrong Answers: " + answersWrong);
+		}	if ($("#a11").is(':checked')) {
+			answersRight++;
+			$("#right-answers").html("Right Answers: " + answersRight);
+		} 		else {
+			answersWrong++;
+			$("#wrong-answers").html("Wrong Answers: " + answersWrong);
+		}	if ($("#a13").is(':checked')) {
+			answersRight++;
+			$("#right-answers").html("Right Answers: " + answersRight);
+		} 		else {
+			answersWrong++;
+			$("#wrong-answers").html("Wrong Answers: " + answersWrong);
+		}	if ($("#a19").is(':checked')) {
+			answersRight++;
+			$("#right-answers").html("Right Answers: " + answersRight);
+		} 
+		else {
+			answersWrong++;
+			$("#wrong-answers").html("Wrong Answers: " + answersWrong);
+		}
+	})
+
 });
 //this function hides the trivia form and shows the results of the trivia game//
 function endGame() {
@@ -52,6 +87,9 @@ function endGame() {
 		$("#sports-trivia-form").hide();
 		$("#startgame").show();
 		$("#score").show();
+		clearTimer();
+		refreshPage();
+
 	})
 };
 
